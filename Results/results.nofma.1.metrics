@@ -1,0 +1,22 @@
+==22413== NVPROF is profiling process 22413, command: ./gppKer_gpuComplex.ex.nofma.iw1 512 2 32768 20 0
+==22413== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==22413== Profiling application: ./gppKer_gpuComplex.ex.nofma.iw1 512 2 32768 20 0
+==22413== Profiling result:
+==22413== Metric result:
+Invocations                               Metric Name                            Metric Description         Min         Max         Avg
+Device "NVIDIA GeForce GTX 1080 (0)"
+    Kernel: NumBandNgpown_kernel(GPUComplex*, GPUComplex*, GPUComplex*, GPUComplex*, int, int, int, double*, double*, double*, double*, int*, int*, int, int)
+          1                             flop_count_dp   Floating Point Operations(Double Precision)  1.2366e+12  1.2366e+12  1.2366e+12
+          1                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          gld_transactions                      Global Load Transactions  2.7484e+11  2.7484e+11  2.7484e+11
+          1                          gst_transactions                     Global Store Transactions      249312      249312      249312
+          1                       atomic_transactions                           Atomic Transactions    53679074    53679074    53679074
+          1                   local_load_transactions                       Local Load Transactions      114808      114808      114808
+          1                  local_store_transactions                      Local Store Transactions      260446      260446      260446
+          1                  shared_load_transactions                      Shared Load Transactions           0           0           0
+          1                 shared_store_transactions                     Shared Store Transactions           0           0           0
+          1                      l2_read_transactions                          L2 Read Transactions  4.4713e+10  4.4713e+10  4.4713e+10
+          1                     l2_write_transactions                         L2 Write Transactions    54314129    54314129    54314129
+          1                    dram_read_transactions               Device Memory Read Transactions  1.8963e+10  1.8963e+10  1.8963e+10
+          1                   dram_write_transactions              Device Memory Write Transactions      517680      517680      517680

@@ -1,0 +1,67 @@
+==10046== NVPROF is profiling process 10046, command: python conv2d.py --kernel_size 3 --stride 3 --height 150 --width 150
+==10046== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==10046== Profiling application: python conv2d.py --kernel_size 3 --stride 3 --height 150 --width 150
+==10046== Profiling result:
+==10046== Metric result:
+Invocations                               Metric Name                            Metric Description         Min         Max         Avg
+Device "NVIDIA GeForce GTX 1080 (0)"
+    Kernel: _ZN2at6native55_GLOBAL__N__11f7a751_22_DistributionUniform_cu_f2fea07d43distribution_elementwise_grid_stride_kernelIdLi2EZNS0_9templates4cuda21uniform_and_transformIddLm4EPNS_17CUDAGeneratorImplEZZZNS4_14uniform_kernelIS7_EEvRNS_18TensorIteratorBaseEddT_ENKUlvE_clEvENKUlvE_clEvEUldE_EEvSA_T2_T3_EUlP24curandStatePhilox4_32_10E_ZNS1_27distribution_nullary_kernelIddLi2ES7_SJ_SE_EEvSA_SF_RKSG_T4_EUlidE_EEviNS_15PhiloxCudaStateET1_SF_
+          2                             flop_count_dp   Floating Point Operations(Double Precision)         624        3040        1832
+          2                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          2                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          2                          gld_transactions                      Global Load Transactions           2           2           2
+          2                          gst_transactions                     Global Store Transactions           7         126          66
+          2                       atomic_transactions                           Atomic Transactions           0           0           0
+          2                   local_load_transactions                       Local Load Transactions           0           0           0
+          2                  local_store_transactions                      Local Store Transactions           0           0           0
+          2                  shared_load_transactions                      Shared Load Transactions           0           0           0
+          2                 shared_store_transactions                     Shared Store Transactions           0           0           0
+          2                      l2_read_transactions                          L2 Read Transactions          16        5440        2728
+          2                     l2_write_transactions                         L2 Write Transactions          20         139          79
+          2                    dram_read_transactions               Device Memory Read Transactions           4        5228        2616
+          2                   dram_write_transactions              Device Memory Write Transactions          16         148          82
+    Kernel: _ZN2at6native54_GLOBAL__N__d8ceb000_21_DistributionNormal_cu_17e44f7d43distribution_elementwise_grid_stride_kernelIdLi2EZNS0_9templates4cuda20normal_and_transformIddLm4EPNS_17CUDAGeneratorImplEZZZNS4_13normal_kernelIS7_EEvRKNS_10TensorBaseEddT_ENKUlvE_clEvENKUlvE_clEvEUldE_EEvRNS_18TensorIteratorBaseET2_T3_EUlP24curandStatePhilox4_32_10E_ZNS1_27distribution_nullary_kernelIddLi2ES7_SM_SF_EEvSH_SI_RKSJ_T4_EUlidE_EEviNS_15PhiloxCudaStateET1_SI_
+          1                             flop_count_dp   Floating Point Operations(Double Precision)     4186000     4186000     4186000
+          1                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          gld_transactions                      Global Load Transactions           2           2           2
+          1                          gst_transactions                     Global Store Transactions       11250       11250       11250
+          1                       atomic_transactions                           Atomic Transactions           0           0           0
+          1                   local_load_transactions                       Local Load Transactions           0           0           0
+          1                  local_store_transactions                      Local Store Transactions           0           0           0
+          1                  shared_load_transactions                      Shared Load Transactions           0           0           0
+          1                 shared_store_transactions                     Shared Store Transactions           0           0           0
+          1                      l2_read_transactions                          L2 Read Transactions        1544        1544        1544
+          1                     l2_write_transactions                         L2 Write Transactions       11263       11263       11263
+          1                    dram_read_transactions               Device Memory Read Transactions         764         764         764
+          1                   dram_write_transactions              Device Memory Write Transactions        7207        7207        7207
+    Kernel: void implicit_convolve_dgemm<int=128, int=6, int=7, int=3, int=3, int=5, int=1, bool=0, bool=1, bool=1>(int, int, int, double const *, int, double*, double const *, kernel_conv_params, __int64, int, double, double, int, double const *, double const *, bool, int, int)
+          1                             flop_count_dp   Floating Point Operations(Double Precision)    15798640    15798640    15798640
+          1                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          gld_transactions                      Global Load Transactions       68482       68482       68482
+          1                          gst_transactions                     Global Store Transactions       35000       35000       35000
+          1                       atomic_transactions                           Atomic Transactions           0           0           0
+          1                   local_load_transactions                       Local Load Transactions           0           0           0
+          1                  local_store_transactions                      Local Store Transactions           0           0           0
+          1                  shared_load_transactions                      Shared Load Transactions      153600      153600      153600
+          1                 shared_store_transactions                     Shared Store Transactions       11520       11520       11520
+          1                      l2_read_transactions                          L2 Read Transactions       31010       31010       31010
+          1                     l2_write_transactions                         L2 Write Transactions       35013       35013       35013
+          1                    dram_read_transactions               Device Memory Read Transactions       14378       14378       14378
+          1                   dram_write_transactions              Device Memory Write Transactions       17487       17487       17487
+    Kernel: _ZN2at6native18elementwise_kernelILi128ELi2EZNS0_15gpu_kernel_implINS0_15CUDAFunctor_addIdEEEEvRNS_18TensorIteratorBaseERKT_EUliE_EEviT1_
+          1                             flop_count_dp   Floating Point Operations(Double Precision)      140000      140000      140000
+          1                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          gld_transactions                      Global Load Transactions      140002      140002      140002
+          1                          gst_transactions                     Global Store Transactions       17500       17500       17500
+          1                       atomic_transactions                           Atomic Transactions           0           0           0
+          1                   local_load_transactions                       Local Load Transactions           0           0           0
+          1                  local_store_transactions                      Local Store Transactions           0           0           0
+          1                  shared_load_transactions                      Shared Load Transactions           0           0           0
+          1                 shared_store_transactions                     Shared Store Transactions           0           0           0
+          1                      l2_read_transactions                          L2 Read Transactions       20233       20233       20233
+          1                     l2_write_transactions                         L2 Write Transactions       17529       17529       17529
+          1                    dram_read_transactions               Device Memory Read Transactions       17637       17637       17637
+          1                   dram_write_transactions              Device Memory Write Transactions       13402       13402       13402

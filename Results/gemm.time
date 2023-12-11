@@ -1,0 +1,14 @@
+==48473== NVPROF is profiling process 48473, command: ./cublas_gemm_example
+==48473== Profiling application: ./cublas_gemm_example
+==48473== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+355.11ms     352ns                    -               -         -         -         -       32B  86.698MB/s    Pageable      Device  NVIDIA GeForce          1        13  [CUDA memcpy HtoD]
+355.11ms     224ns                    -               -         -         -         -       32B  136.24MB/s    Pageable      Device  NVIDIA GeForce          1        13  [CUDA memcpy HtoD]
+361.07ms  4.1280us              (1 1 1)       (128 1 1)        72  10.000KB        0B         -           -           -           -  NVIDIA GeForce          1        13  void gemmSN_NN_kernel<double, int=128, int=2, int=4, int=8, int=2, int=4, bool=0, cublasGemvTensorStridedBatched<double const >, cublasGemvTensorStridedBatched<double const >, cublasGemvTensorStridedBatched<double>>(cublasGemmSmallNParams<double const , cublasGemvTensorStridedBatched<double const >, cublasGemvTensorStridedBatched<double const >, double>) [1204]
+361.09ms  1.0880us                    -               -         -         -         -       32B  28.049MB/s      Device    Pageable  NVIDIA GeForce          1        13  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

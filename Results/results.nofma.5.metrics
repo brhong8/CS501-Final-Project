@@ -1,0 +1,22 @@
+==22613== NVPROF is profiling process 22613, command: ./gppKer_gpuComplex.ex.nofma.iw5 512 2 32768 20 0
+==22613== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==22613== Profiling application: ./gppKer_gpuComplex.ex.nofma.iw5 512 2 32768 20 0
+==22613== Profiling result:
+==22613== Metric result:
+Invocations                               Metric Name                            Metric Description         Min         Max         Avg
+Device "NVIDIA GeForce GTX 1080 (0)"
+    Kernel: NumBandNgpown_kernel(GPUComplex*, GPUComplex*, GPUComplex*, GPUComplex*, int, int, int, double*, double*, double*, double*, int*, int*, int, int)
+          1                             flop_count_dp   Floating Point Operations(Double Precision)  5.3038e+12  5.3038e+12  5.3038e+12
+          1                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          gld_transactions                      Global Load Transactions  3.8477e+11  3.8477e+11  3.8477e+11
+          1                          gst_transactions                     Global Store Transactions     1005000     1005000     1005000
+          1                       atomic_transactions                           Atomic Transactions   268383846   268383846   268383846
+          1                   local_load_transactions                       Local Load Transactions      915004      915004      915004
+          1                  local_store_transactions                      Local Store Transactions      457126      457126      457126
+          1                  shared_load_transactions                      Shared Load Transactions           0           0           0
+          1                 shared_store_transactions                     Shared Store Transactions           0           0           0
+          1                     l2_write_transactions                         L2 Write Transactions   269837819   269837819   269837819
+          1                    dram_read_transactions               Device Memory Read Transactions  1.5025e+10  1.5025e+10  1.5025e+10
+          1                   dram_write_transactions              Device Memory Write Transactions     2292178     2292178     2292178
+==22613== Warning: One or more events or metrics overflowed. Rerun with "--print-gpu-trace" for detail.

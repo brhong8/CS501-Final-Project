@@ -1,0 +1,23 @@
+==22130== NVPROF is profiling process 22130, command: ./gppKer_gpuComplex.ex.fma.iw2 512 2 32768 20 0
+==22130== Profiling application: ./gppKer_gpuComplex.ex.fma.iw2 512 2 32768 20 0
+==22130== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+1.17462s  95.218ms                    -               -         -         -         -  819.00MB  8.3997GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.26993s  95.313ms                    -               -         -         -         -  819.00MB  8.3914GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.36534s  29.728ms                    -               -         -         -         -  256.00MB  8.4097GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.39517s  29.781ms                    -               -         -         -         -  256.00MB  8.3946GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.42497s  11.584us                    -               -         -         -         -  128.00KB  10.538GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.42499s     672ns                    -               -         -         -         -  6.3984KB  9.0804GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.42502s  21.440us                    -               -         -         -         -  256.00KB  11.387GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.42504s     192ns                    -               -         -         -         -       16B  79.473MB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.42505s     192ns                    -               -         -         -         -       16B  79.473MB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.42505s     192ns                    -               -         -         -         -       16B  79.473MB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+1.42547s  9.53683s         (512 1638 1)        (32 1 1)        56        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  NumBandNgpown_kernel(GPUComplex*, GPUComplex*, GPUComplex*, GPUComplex*, int, int, int, double*, double*, double*, double*, int*, int*, int, int) [147]
+10.9623s  1.2160us                    -               -         -         -         -       16B  12.548MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+10.9624s  1.0230us                    -               -         -         -         -       16B  14.916MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+SrcMemType: The type of source memory accessed by memory operation/copy
+DstMemType: The type of destination memory accessed by memory operation/copy

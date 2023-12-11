@@ -1,0 +1,22 @@
+==48457== NVPROF is profiling process 48457, command: ./cublas_gemm_example
+==48457== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==48457== Profiling application: ./cublas_gemm_example
+==48457== Profiling result:
+==48457== Metric result:
+Invocations                               Metric Name                            Metric Description         Min         Max         Avg
+Device "NVIDIA GeForce GTX 1080 (0)"
+    Kernel: void gemmSN_NN_kernel<double, int=128, int=2, int=4, int=8, int=2, int=4, bool=0, cublasGemvTensorStridedBatched<double const >, cublasGemvTensorStridedBatched<double const >, cublasGemvTensorStridedBatched<double>>(cublasGemmSmallNParams<double const , cublasGemvTensorStridedBatched<double const >, cublasGemvTensorStridedBatched<double const >, double>)
+          1                             flop_count_dp   Floating Point Operations(Double Precision)          32          32          32
+          1                             flop_count_sp   Floating Point Operations(Single Precision)           0           0           0
+          1                             flop_count_hp     Floating Point Operations(Half Precision)           0           0           0
+          1                          gld_transactions                      Global Load Transactions          50          50          50
+          1                          gst_transactions                     Global Store Transactions           2           2           2
+          1                       atomic_transactions                           Atomic Transactions           0           0           0
+          1                   local_load_transactions                       Local Load Transactions           0           0           0
+          1                  local_store_transactions                      Local Store Transactions           0           0           0
+          1                  shared_load_transactions                      Shared Load Transactions          12          12          12
+          1                 shared_store_transactions                     Shared Store Transactions          32          32          32
+          1                      l2_read_transactions                          L2 Read Transactions         220         220         220
+          1                     l2_write_transactions                         L2 Write Transactions          15          15          15
+          1                    dram_read_transactions               Device Memory Read Transactions         201         201         201
+          1                   dram_write_transactions              Device Memory Write Transactions           0           0           0
